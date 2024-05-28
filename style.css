@@ -1,0 +1,119 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container
+{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(100deg, #EE82EE,#D8BFD8);
+    display: flex;
+    justify-content: center;
+}
+.container .todo-app
+{
+    width: 50%;
+    margin: auto;
+    background: #ffffff;
+    border-radius: 20px;
+}
+.todo-app h2
+{
+    color: #800080;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+}
+.todo-app h2 img 
+{
+    width: 60px;
+    padding-left: 1em;
+}
+.container .todo-app .row 
+{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    background-color: hwb(313 91% 6%);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    width: 80%;
+   
+}
+.container .todo-app .row  input
+{
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 20px;
+  font-size: 15px;
+}
+.container .todo-app .row button 
+{
+    background: #EE82EE;
+    width: 25%;
+    border-radius: 30px;
+    border: none;
+    outline:none;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+}
+.container .todo-app #listContainer
+{
+    width: 60%;
+    margin: auto;
+}
+.container .todo-app ul li
+{
+    list-style-type: none;
+    color: hwb(314 27% 63%);
+    text-transform: capitalize;
+    padding: 10px 0;
+    font-weight:bold;
+    cursor: pointer;
+    position: relative;
+    margin: 2em 0;
+}
+.container .todo-app ul li::before
+{
+    content: "";
+    position: absolute;
+    background-image: url("unchecked.png");
+    background-size: cover;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    left: -50px;
+    top: 5px;
+}
+.container .todo-app ul li.checked
+{
+    text-decoration: line-through;
+    color:hwb(314 27% 63%);
+}
+.container .todo-app ul li.checked::before
+{
+    background-image: url("checked.png");
+}
+.container .todo-app ul li span
+{
+    font-size: 20px;
+    position: absolute;
+    right: 30px;
+    align-items: center;
+    text-align: center;
+    top: 5px;
+    width: 30px;
+}
+.container .todo-app ul li span:hover
+{
+    background: hwb(313 91% 6%);
+    border-radius: 10px ;
+}

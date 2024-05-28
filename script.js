@@ -1,0 +1,26 @@
+const inputBox = document.getElementById("inputBox");
+const listContainer = document.getElementById("listContainer");
+function addTask(){
+    if(inputBox.value=== ''){
+        alert("Task cannot be empty!")
+    }
+    else{
+        let  li = document.createElement("li");
+        li.innerHTML = inputBox.value;
+        listContainer.appendChild(li);
+        let span = document.createElement("span");
+        span.innerHTML = "&#10006";
+        li.appendChild(span)
+    }
+        inputBox.value="";
+}
+listContainer.addEventListener("click", function(e){
+    if(e.target.tagName === "LI"){
+        e.target.classList.toggle("checked");
+    }
+    else if(e.target.tagName === "SPAN"){
+        e.target.parentElement.remove();
+    }
+}
+
+)
