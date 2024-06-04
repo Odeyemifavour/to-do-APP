@@ -9,8 +9,10 @@
 {
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(100deg, #EE82EE,#D8BFD8);
+    background: black;
     display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
     justify-content: center;
 }
 .container .todo-app
@@ -116,4 +118,25 @@
 {
     background: hwb(313 91% 6%);
     border-radius: 10px ;
+}
+.container #taskCounter
+{
+   margin: 2em  0; 
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   
+}
+.container #taskCounter p
+{
+    font-size: 20px;
+    font-weight: 600;
+    color:black;
+    color:#800080;
+}
+
+@media screen {
+    
 }

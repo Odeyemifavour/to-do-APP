@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="container">
         <div class= "todo-app">
             <h2> To Do List App <img src="icon.png" alt=""></h2>
@@ -14,13 +15,14 @@
                 <input type="text" id="inputBox" placeholder="Add your task here..." >
                 <button onclick="addTask()">Add task</button>
             </div>
-            <ul id="listContainer">
-                <!-- <li class="checked">task1</li>
-                <li>task1</li>
-                <li>task1</li>
-                <li>task1</li> -->
-            </ul>
+            <div id="taskCounter" style="display: none;">
+                <p>Completed Task: <span id="completedTask"> 0</span></p>
+                <p> Remaining Task:  <span id="remainingTask"> 0</span> </p>
+                <p>Total Task: <span id="totalTask"></span></p>
+            </div>
+            <ul id="listContainer"> </ul>
         </div>
+        
     </div>
     <script src="script.js"></script>
 </body>
